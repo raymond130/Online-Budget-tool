@@ -2,3 +2,8 @@ Body {
     background: rgb(47, 0, 133);
     background: linear-gradient(0deg, rgba(47, 0, 133, 1) 15%, rgba(176, 87, 252, 1) 100%);
 }
+
+li {
+    list-style-type: none;
+    padding: 10px;
+}
