@@ -1,6 +1,12 @@
 Body {
     background: rgb(47, 0, 133);
     background: linear-gradient(0deg, rgba(47, 0, 133, 1) 15%, rgba(176, 87, 252, 1) 100%);
+    background-repeat: no-repeat;
+    height: 100%
+}
+
+html {
+    height: 100%;
 }
 
 li {
@@ -14,4 +20,6 @@ h1 {
     padding: 20px;
     margin: 50px;
     background-color: rgb(211, 209, 204);
+    border: 5px solid black;
+    border-radius: 1em;
 }
