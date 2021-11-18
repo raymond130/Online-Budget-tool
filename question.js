@@ -9,13 +9,15 @@ const handleInput = (event) => {
         setAttribute({...attribute,
             [event.target.question]: value
         })
+}
 
 
-        const addToBudget = (event, budgetQues, value) => {
+
+        const addToBudget = (event) => {
 
             event.preventDefault()
                 /* line below should map the dictionary of attributes to budget attributes*/
-            Object.entries(attribute).map(([key, value]) => Budget.budget)
+            Object.entries(attribute).map(([key, value]) => Budget.budget.key = value)
 
         }
 
@@ -29,7 +31,10 @@ const handleInput = (event) => {
                     />     
 
 
-                    <
-                    /label>)
+                    </label>)
+                    }
 
-                }
+
+
+
+                
