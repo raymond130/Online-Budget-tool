@@ -1,34 +1,62 @@
 import React, { useState } from 'react'
-import Question from 'question'
-import budget from 'Budget'
+/*import Question from './question.js' */
+import Budget from './Budget.js'
+import questions from './questionsList.js'
 
-const App = (props) => {
 
-    const [showPiece, setPiece] = useState(0)
-    const questions = questionsList.questions
-    const questionElements = questions.map(question => <Question key ={questionElements.length} question = {question}/>)
-    let phase = 0;
+let phase = 0
+const App = (props) =>{
+
+    const [attribute, setAttribute] = useState({})
+
+    const addToBudget = (budgetProps) =>{
+
+        Budget(attribute);
+
+    }
     const questionPhase = () => {
-        /*changes phases through 1,2,3 then 0 */   
-        switch(phase){
+          
+            if (phase < 3){
+                phase = phase + 1;
+          
+            }
+                
+            else if(phase == 3){
+                phase = 0;
+                addToBudget(attribute);              
+            }
+            console.log(phase);
+             
+    }
 
-            case phase < 3:
-                phase = phase+1
-                break;
-            case 3:
-                phase = 0
-        }
+    const handleInput = (event) => {
+        const value = event.target.value;
+        console.log('valued!')
+        setAttribute({
+            ...attribute,
+            [event.target.question]: value
+        })
+
     }
 
     return (
-        <div>)
-            <h3> Please answer the following questions</h3>
-            <div>
-                <ul>
-                    {questionElements.filter(question => question.phase = phase)}
-                </ul>
-
-            </div>
+        <div>
+            <h3> Please answer some questions to start</h3>
+            <ul>
+                {console.log('here we are')}
+                {console.log(questions.filter(question => question.phase === phase))}
+                {questions.filter(question => question.phase === phase).map(question =>
+                    { < label > {question.script} 
+                    <input type="text"
+                    question = {question.attribute}
+                    value={question.attribute}
+                    onChange={handleInput}
+                    />
+                    </label>})}
+            </ul>
+            <button onClick={questionPhase}> {phase === 2 ? 'Next' : 'Submit'} </button>
         </div>
     )
 }
+
+export default App
