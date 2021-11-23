@@ -1,8 +1,22 @@
 import React from 'react'
 
-const budget
+const budget = {};
+const Budget = (props) => {
 
-const freeSpend = (this.income, this.expenses) => {
+    budget.income = props.income;
+    budget.expenses = props.expenses;
 
-    return this.income - this.expenses
+
 }
+
+
+const freeSpend = () => {
+    const leftOver = budget.income - budget.expenses
+    return leftOver;
+}
+
+const returnIncome = () => { return budget.income }
+
+const returnBills = () => { return budget.bills }
+
+export default freeSpend
