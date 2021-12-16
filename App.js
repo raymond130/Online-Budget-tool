@@ -4,12 +4,14 @@ import Budget from './Budget.js'
 import questions from './questionsList.js'
 
 
-let phase = 0
+
 const App = (props) =>{
 
     const [attribute, setAttribute] = useState({})
+    const[phase, setPhase] = useState(0)
 
-    const addToBudget = (budgetProps) =>{
+    const addToBudget = () =>{
+
 
         Budget(attribute);
 
@@ -17,12 +19,16 @@ const App = (props) =>{
     const questionPhase = () => {
           
             if (phase < 3){
-                phase = phase + 1;
+
+                setPhase(phase +1);
+
           
             }
                 
             else if(phase == 3){
-                phase = 0;
+
+                setPhase(0);
+
                 addToBudget(attribute);              
             }
             console.log(phase);
@@ -43,8 +49,7 @@ const App = (props) =>{
         <div>
             <h3> Please answer some questions to start</h3>
             <ul>
-                {console.log('here we are')}
-                {console.log(questions.filter(question => question.phase === phase))}
+
                 {questions.filter(question => question.phase === phase).map(question =>
                     { < label > {question.script} 
                     <input type="text"
@@ -54,7 +59,8 @@ const App = (props) =>{
                     />
                     </label>})}
             </ul>
-            <button onClick={questionPhase}> {phase === 2 ? 'Next' : 'Submit'} </button>
+            <button onClick={questionPhase}> {phase === 3 ? 'Submit' : 'Next'} </button>
+
         </div>
     )
 }
