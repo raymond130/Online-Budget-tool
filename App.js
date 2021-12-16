@@ -12,18 +12,23 @@ const App = (props) =>{
 
     const addToBudget = () =>{
 
+
         Budget(attribute);
 
     }
     const questionPhase = () => {
           
             if (phase < 3){
+
                 setPhase(phase +1);
+
           
             }
                 
             else if(phase == 3){
+
                 setPhase(0);
+
                 addToBudget(attribute);              
             }
             console.log(phase);
@@ -44,6 +49,7 @@ const App = (props) =>{
         <div>
             <h3> Please answer some questions to start</h3>
             <ul>
+
                 {questions.filter(question => question.phase === phase).map(question =>
                     { < label > {question.script} 
                     <input type="text"
@@ -54,6 +60,7 @@ const App = (props) =>{
                     </label>})}
             </ul>
             <button onClick={questionPhase}> {phase === 3 ? 'Submit' : 'Next'} </button>
+
         </div>
     )
 }
