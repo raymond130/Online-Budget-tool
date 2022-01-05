@@ -9,9 +9,7 @@ const App = (props) =>{
 
     const [attribute, setAttribute] = useState({})
     const[phase, setPhase] = useState(0)
-
     const addToBudget = () =>{
-
 
         Budget(attribute);
 
@@ -21,6 +19,7 @@ const App = (props) =>{
             if (phase < 3){
 
                 setPhase(phase +1);
+
 
           
             }
@@ -45,12 +44,14 @@ const App = (props) =>{
 
     }
 
+    const questionToDisplay = questions.filter(question => question.phase === phase)
+
     return (
         <div>
             <h3> Please answer some questions to start</h3>
             <ul>
 
-                {questions.filter(question => question.phase === phase).map(question =>
+                {questionToDisplay.map(question =>
                     { < label > {question.script} 
                     <input type="text"
                     question = {question.attribute}
