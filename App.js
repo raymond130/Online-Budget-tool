@@ -9,6 +9,7 @@ const App = (props) =>{
 
     const [attribute, setAttribute] = useState({})
     const[phase, setPhase] = useState(0)
+
     const addToBudget = () =>{
 
         Budget(attribute);
@@ -17,17 +18,12 @@ const App = (props) =>{
     const questionPhase = () => {
           
             if (phase < 3){
-
                 setPhase(phase +1);
-
-
           
             }
                 
-            else if(phase == 3){
-
+            else if(phase === 3){
                 setPhase(0);
-
                 addToBudget(attribute);              
             }
             console.log(phase);
@@ -49,19 +45,19 @@ const App = (props) =>{
     return (
         <div>
             <h3> Please answer some questions to start</h3>
-            <ul>
+            {questionToDisplay.map(question => <h4> question.script </h4>)}
 
+            <ul>
                 {questionToDisplay.map(question =>
-                    { < label > {question.script} 
+                    { <li>< label > {question.script} 
                     <input type="text"
                     question = {question.attribute}
                     value={question.attribute}
                     onChange={handleInput}
                     />
-                    </label>})}
+                    </label></li>})}
             </ul>
             <button onClick={questionPhase}> {phase === 3 ? 'Submit' : 'Next'} </button>
-
         </div>
     )
 }
