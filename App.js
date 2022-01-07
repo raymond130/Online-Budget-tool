@@ -45,7 +45,7 @@ const App = (props) =>{
     return (
         <div>
             <h3> Please answer some questions to start</h3>
-            {questionToDisplay.map(question => <h4> question.script </h4>)}
+            {questionToDisplay.map(question => <h4> {question.script} </h4>)}
 
             <ul>
                 {questionToDisplay.map(question =>
