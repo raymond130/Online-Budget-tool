@@ -1,0 +1,6 @@
+1/6/22
+
+Suceeded in having the question display outside the label - I wasn't escaping into JSX with {}
+
+added to to do list: have budget results display properly
+
