@@ -13,13 +13,16 @@ li {
     list-style-type: none;
     padding: 10px;
     margin: 5px;
-    background-color: rgb(211, 209, 204);
+    background-color: rgb(170, 196, 153);
 }
 
 h1 {
-    padding: 20px;
-    margin: 50px;
-    background-color: rgb(211, 209, 204);
-    border: 5px solid black;
+    padding: 50px;
+    margin: 25%;
+    background-color: rgb(146, 170, 185);
+    border: 2px solid rgb(216, 213, 198);
     border-radius: 1em;
+    vertical-align: middle;
+    text-align: center;
+
 }
