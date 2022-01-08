@@ -5,3 +5,10 @@ Suceeded in having the question display outside the label - I wasn't escaping in
 added to to do list: have budget results display properly
 
 did some research on how to make the labels display
+
+
+1/8/22
+
+tried to resolve the issue of non centering of the body element
+
+tomorrow and tonight going to try to have the label display
