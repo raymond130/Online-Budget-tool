@@ -49,14 +49,17 @@ const App = (props) =>{
 
             <ul>
                 {questionToDisplay.map(question =>
-                    { <li>< label > {question.script} 
+                    <li><label> {question.script} 
                     <input type="text"
                     question = {question.attribute}
-                    value={question.attribute}
+                    value = "0"
                     onChange={handleInput}
                     />
-                    </label></li>})}
+                    </label></li>)}  
             </ul>
+            
+            {console.log(questionToDisplay.map(question => question.script))}
+
             <button onClick={questionPhase}> {phase === 3 ? 'Submit' : 'Next'} </button>
         </div>
     )
