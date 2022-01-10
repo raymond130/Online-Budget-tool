@@ -12,3 +12,10 @@ did some research on how to make the labels display
 tried to resolve the issue of non centering of the body element
 
 tomorrow and tonight going to try to have the label display
+
+
+1/9/22 
+
+Figured out the issue with the label not being displayed - ha dan extra set of curly braces around the HTML element
+
+Next issue is that labels can't be typed into, need to make sure they return numbers to the budget for final tabulation
