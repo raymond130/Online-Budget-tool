@@ -16,6 +16,13 @@ tomorrow and tonight going to try to have the label display
 
 1/9/22 
 
-Figured out the issue with the label not being displayed - ha dan extra set of curly braces around the HTML element
+Figured out the issue with the label not being displayed - had an extra set of curly braces around the HTML element
 
 Next issue is that labels can't be typed into, need to make sure they return numbers to the budget for final tabulation
+
+
+1/10/22
+
+Changed the welcome message prompts and thoughts about the proper way to display the question prompts.
+
+devoted some thought to how to display finished budget - HTML tables looking appropriate. Possibly will need to make an extra class for them to work.
