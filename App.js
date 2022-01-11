@@ -26,13 +26,13 @@ const App = (props) =>{
                 setPhase(0);
                 addToBudget(attribute);              
             }
-            console.log(phase);
              
     }
 
     const handleInput = (event) => {
         const value = event.target.value;
         console.log('valued!')
+        console.log(value)
         setAttribute({
             ...attribute,
             [event.target.question]: value
@@ -44,19 +44,17 @@ const App = (props) =>{
 
     return (
         <div>
-            <h3> Please answer some questions to start</h3>
+            {phase === 0 ? <h3> Please answer some questions to start </h3>: ""}
             {questionToDisplay.map(question => <h4> {question.script} </h4>)}
+            {phase === 3 ? <h3> Thank you! Your budget will display after clicking submit </h3>: ""}
 
-            <ul>
                 {questionToDisplay.map(question =>
-                    <li><label> {question.script} 
+                    <li><label>
                     <input type="text"
                     question = {question.attribute}
-                    value = "0"
                     onChange={handleInput}
                     />
                     </label></li>)}  
-            </ul>
             
             {console.log(questionToDisplay.map(question => question.script))}
 
