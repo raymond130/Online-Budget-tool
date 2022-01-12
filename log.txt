@@ -26,3 +26,7 @@ Next issue is that labels can't be typed into, need to make sure they return num
 Changed the welcome message prompts and thoughts about the proper way to display the question prompts.
 
 devoted some thought to how to display finished budget - HTML tables looking appropriate. Possibly will need to make an extra class for them to work.
+
+1/11/22
+
+Designed budget return offline, started refactoring for the return message and additional class needed to display the completed budget
