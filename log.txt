@@ -30,3 +30,7 @@ devoted some thought to how to display finished budget - HTML tables looking app
 1/11/22
 
 Designed budget return offline, started refactoring for the return message and additional class needed to display the completed budget
+
+1/12/22
+
+Added basic budget return file. Some refactoring still has to be done to get it to work - modification of the file's exports as well.
