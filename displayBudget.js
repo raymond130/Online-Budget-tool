@@ -4,14 +4,15 @@ import questions from "./questionsList.js"
 //first thing is to get the budget prop
 
 
-thisBudget = {}
+var thisBudget = {}
 
-const budgetToDisplay = (props) => {
+export const budgetToDisplay = (props) => {
     thisBudget = props;
+    displayBudget();
 }
 
 
- const displayBudget = () => {
+ export const displayBudget = () => {
 
     return (
 
@@ -19,12 +20,8 @@ const budgetToDisplay = (props) => {
             <li>Your total income is: {thisBudget.returnIncome}</li>
             <li>Your total expenses are: {thisBudget.returnExpenses}</li>
             <li>Your total spending money is: {thisBudget.freeSpend}</li>
-
-
         </ol>
 
 
     )  
  }
-
- export default displayBudget
