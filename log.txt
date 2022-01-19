@@ -34,3 +34,7 @@ Designed budget return offline, started refactoring for the return message and a
 1/12/22
 
 Added basic budget return file. Some refactoring still has to be done to get it to work - modification of the file's exports as well.
+
+1/18/22
+
+updated budget return file and app with some error fixes. Testing revealed  final budget not showing - will have to be tackled tomorrow.
