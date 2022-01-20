@@ -38,3 +38,7 @@ Added basic budget return file. Some refactoring still has to be done to get it 
 1/18/22
 
 updated budget return file and app with some error fixes. Testing revealed  final budget not showing - will have to be tackled tomorrow.
+
+1/19/22
+
+updated app, budget, and displayBudget to try to get to display - it didn't work. I feel like I'm doing something wrong with passing the variables but I can't be sure - logging is difficult.
