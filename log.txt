@@ -42,3 +42,7 @@ updated budget return file and app with some error fixes. Testing revealed  fina
 1/19/22
 
 updated app, budget, and displayBudget to try to get to display - it didn't work. I feel like I'm doing something wrong with passing the variables but I can't be sure - logging is difficult.
+
+1.27.22
+
+Need to understand why the variables aren't getting stored - starting research by looking up the correct way to do forms
